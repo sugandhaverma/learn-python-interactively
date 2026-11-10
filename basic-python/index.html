@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fb">
+  <title>Basic Python — Python, one step at a time</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html"><span class="brand-mark">Py</span> Python, one step at a time</a>
+    <a class="back-link" href="../index.html">All lessons <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Folder 01 · Beginner</p>
+        <h1 id="page-title">Your first steps<br>with Python<span class="period">.</span></h1>
+        <p class="hero-description">Learn the building blocks, see what common errors mean, and run your own code right here.</p>
+        <a class="button button-primary" href="#playground">Try some code <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <span class="spark spark-one">✦</span>
+        <span class="spark spark-two">✳</span>
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="python-tile">Py</div>
+        <span class="float-chip chip-one">print()</span>
+        <span class="float-chip chip-two">x = 5</span>
+        <span class="float-chip chip-three"># let's go!</span>
+      </div>
+    </section>
+
+    <nav class="lesson-nav" aria-label="On this page">
+      <a href="#start">Start here</a>
+      <a href="#syntax">Syntax</a>
+      <a href="#mistakes">Common mistakes</a>
+      <a href="#playground">Run code</a>
+      <a href="#check">Quick check</a>
+    </nav>
+
+    <section class="section" id="start">
+      <div class="section-heading">
+        <p class="eyebrow">The learning path</p>
+        <h2>Small ideas. Big possibilities.</h2>
+        <p>Go in order, or jump to the topic you need. Each card includes a tiny example to try.</p>
+      </div>
+      <div class="topic-grid">
+        <article class="topic-card">
+          <span class="topic-number">01</span>
+          <h3>Say hello</h3>
+          <p><code>print()</code> displays a message. Text needs quote marks.</p>
+          <pre><code>print("Hello, world!")</code></pre>
+          <button class="text-button load-example" data-example="hello">Try this example <span aria-hidden="true">→</span></button>
+        </article>
+        <article class="topic-card">
+          <span class="topic-number">02</span>
+          <h3>Store a value</h3>
+          <p>A variable is a name for a value. Use <code>=</code> to assign it.</p>
+          <pre><code>name = "Mina"
+print(name)</code></pre>
+          <button class="text-button load-example" data-example="variables">Try this example <span aria-hidden="true">→</span></button>
+        </article>
+        <article class="topic-card">
+          <span class="topic-number">03</span>
+          <h3>Make a choice</h3>
+          <p><code>if</code> runs code only when a condition is true. Indent its body.</p>
+          <pre><code>age = 12
+if age >= 10:
+    print("Ready!")</code></pre>
+          <button class="text-button load-example" data-example="condition">Try this example <span aria-hidden="true">→</span></button>
+        </article>
+        <article class="topic-card">
+          <span class="topic-number">04</span>
+          <h3>Repeat a task</h3>
+          <p>A <code>for</code> loop repeats once for every item in a sequence.</p>
+          <pre><code>for number in range(3):
+    print(number)</code></pre>
+          <button class="text-button load-example" data-example="loop">Try this example <span aria-hidden="true">→</span></button>
+        </article>
+        <article class="topic-card">
+          <span class="topic-number">05</span>
+          <h3>Keep a list</h3>
+          <p>Lists hold multiple values. Square brackets make a list.</p>
+          <pre><code>colors = ["blue", "gold"]
+print(colors[0])</code></pre>
+          <button class="text-button load-example" data-example="list">Try this example <span aria-hidden="true">→</span></button>
+        </article>
+        <article class="topic-card">
+          <span class="topic-number">06</span>
+          <h3>Make a function</h3>
+          <p>A function is a reusable recipe. Define it with <code>def</code>.</p>
+          <pre><code>def greet():
+    print("Hi!")
+
+greet()</code></pre>
+          <button class="text-button load-example" data-example="function">Try this example <span aria-hidden="true">→</span></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section syntax-section" id="syntax">
+      <div class="section-heading">
+        <p class="eyebrow">A few useful habits</p>
+        <h2>Python likes things tidy.</h2>
+      </div>
+      <div class="dos-donts">
+        <article class="habit-card do-card">
+          <h3><span aria-hidden="true">✓</span> Do</h3>
+          <ul>
+            <li>Use four spaces to indent code inside an <code>if</code>, loop, or function.</li>
+            <li>Choose clear names like <code>favorite_color</code>.</li>
+            <li>Use matching quote marks: <code>"hello"</code> or <code>'hello'</code>.</li>
+            <li>Test one small change at a time.</li>
+          </ul>
+        </article>
+        <article class="habit-card dont-card">
+          <h3><span aria-hidden="true">×</span> Don't</h3>
+          <ul>
+            <li>Use spaces in variable names: write <code>first_name</code>, not <code>first name</code>.</li>
+            <li>Forget the colon at the end of <code>if</code>, <code>for</code>, and <code>def</code> lines.</li>
+            <li>Mix tabs and spaces for indentation.</li>
+            <li>Assume <code>=</code> and <code>==</code> mean the same thing.</li>
+          </ul>
+        </article>
+      </div>
+      <div class="tip-banner">
+        <span class="tip-icon" aria-hidden="true">i</span>
+        <p><strong>Remember:</strong> Python is case-sensitive. <code>name</code> and <code>Name</code> are different names.</p>
+      </div>
+    </section>
+
+    <section class="section mistakes-section" id="mistakes">
+      <div class="section-heading">
+        <p class="eyebrow">Errors are clues</p>
+        <h2>Oops! What went wrong?</h2>
+        <p>Everyone gets errors. Read the message, find the line, and check these usual suspects.</p>
+      </div>
+      <div class="mistake-list">
+        <details class="mistake">
+          <summary><span class="error-label">SyntaxError</span> Missing quote or colon <span class="chevron" aria-hidden="true">+</span></summary>
+          <div class="mistake-body">
+            <p>Python can't understand the code's shape. Check that strings have matching quotes and statements like <code>if</code> end with a colon.</p>
+            <pre><code># Not quite
+print("Hello)
+
+# Fixed
+print("Hello")</code></pre>
+          </div>
+        </details>
+        <details class="mistake">
+          <summary><span class="error-label">IndentationError</span> Code is not lined up <span class="chevron" aria-hidden="true">+</span></summary>
+          <div class="mistake-body">
+            <p>The body of an <code>if</code>, loop, or function must be indented consistently, usually by four spaces.</p>
+            <pre><code>if True:
+    print("Indented inside the if")</code></pre>
+          </div>
+        </details>
+        <details class="mistake">
+          <summary><span class="error-label">NameError</span> A name is not defined <span class="chevron" aria-hidden="true">+</span></summary>
+          <div class="mistake-body">
+            <p>Check for a typo or make sure you assigned the variable before using it. Names are case-sensitive.</p>
+            <pre><code>favorite = "mango"
+print(favorite)  # same spelling</code></pre>
+          </div>
+        </details>
+        <details class="mistake">
+          <summary><span class="error-label">TypeError</span> Values don't work together <span class="chevron" aria-hidden="true">+</span></summary>
+          <div class="mistake-body">
+            <p>Some operations need matching types. Convert a number to text before joining it with other text.</p>
+            <pre><code>age = 10
+print("Age: " + str(age))</code></pre>
+          </div>
+        </details>
+        <details class="mistake">
+          <summary><span class="error-label">IndexError</span> List position is out of range <span class="chevron" aria-hidden="true">+</span></summary>
+          <div class="mistake-body">
+            <p>List positions start at <code>0</code>. A list with two items has positions <code>0</code> and <code>1</code>.</p>
+            <pre><code>pets = ["cat", "dog"]
+print(pets[0])  # cat</code></pre>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section playground-section" id="playground">
+      <div class="section-heading">
+        <p class="eyebrow">Your turn</p>
+        <h2>Write it. Run it. Learn.</h2>
+        <p>Change the code, then press Run. Your code runs in this page using Python in your browser.</p>
+      </div>
+      <div class="playground">
+        <div class="editor-panel">
+          <div class="panel-top">
+            <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <label for="code-editor">main.py</label>
+            <button class="reset-button" id="reset-code" type="button">Reset</button>
+          </div>
+          <textarea id="code-editor" aria-label="Python code editor" spellcheck="false" autocapitalize="off" autocomplete="off">name = "Python learner"
+print("Hello, " + name + "!")
+
+for step in range(1, 4):
+    print("Practice step", step)</textarea>
+          <div class="editor-footer">
+            <span id="runner-status" role="status" aria-live="polite">Python loads when you run code for the first time.</span>
+            <button class="button run-button" id="run-code" type="button"><span aria-hidden="true">▶</span> Run code</button>
+          </div>
+        </div>
+        <div class="output-panel">
+          <div class="output-title"><span class="output-indicator"></span> Output</div>
+          <pre id="code-output" aria-live="polite">Your result will appear here.</pre>
+        </div>
+      </div>
+      <p class="runner-note">The first run downloads the Python runtime and may take a little while. An internet connection is needed. This practice runner does not support <code>input()</code>; try code that uses <code>print()</code> instead.</p>
+    </section>
+
+    <section class="section check-section" id="check">
+      <div class="section-heading">
+        <p class="eyebrow">Quick check</p>
+        <h2>Ready for a tiny challenge?</h2>
+        <p>Choose the Python line that prints the number five.</p>
+      </div>
+      <div class="quiz" data-answer="b">
+        <button class="quiz-option" data-choice="a" type="button"><code>print = 5</code></button>
+        <button class="quiz-option" data-choice="b" type="button"><code>print(5)</code></button>
+        <button class="quiz-option" data-choice="c" type="button"><code>Print("5")</code></button>
+        <p class="quiz-feedback" id="quiz-feedback" aria-live="polite">Pick an answer to see how you did.</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>You don't have to get it right the first time. That's what practice is for. <span aria-hidden="true">✦</span></p>
+      <a href="../index.html">Back to learning path ↑</a>
+    </footer>
+  </main>
+</body>
+</html>
