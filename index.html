@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fb">
+  <title>Python, one step at a time</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #172033;
+      background: #f6f7fb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body { margin: 0; }
+
+    main {
+      display: grid;
+      min-height: 100vh;
+      place-items: center;
+      padding: 2rem;
+    }
+
+    .home {
+      width: min(100%, 900px);
+      animation: rise-in 650ms ease-out both;
+    }
+
+    .eyebrow {
+      color: #5366cf;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 700px;
+      margin: .7rem 0 1rem;
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      letter-spacing: -.06em;
+      line-height: 1;
+    }
+
+    .intro {
+      max-width: 620px;
+      color: #59647a;
+      font-size: 1.15rem;
+      line-height: 1.7;
+    }
+
+    .course-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-top: 3rem;
+      padding: 1.6rem;
+      border: 1px solid #e4e7f0;
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: 0 18px 50px #202d5110;
+      color: inherit;
+      text-decoration: none;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 55px #202d511a;
+    }
+
+    .course-card h2 { margin: 0 0 .45rem; }
+    .course-card p { margin: 0; color: #667087; line-height: 1.6; }
+
+    .number {
+      display: grid;
+      width: 3.2rem;
+      height: 3.2rem;
+      flex: 0 0 auto;
+      place-items: center;
+      border-radius: 15px;
+      background: #edf0ff;
+      color: #4355bd;
+      font-weight: 800;
+    }
+
+    .arrow { color: #5366cf; font-size: 1.5rem; }
+
+    @keyframes rise-in {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="home" aria-labelledby="page-title">
+      <p class="eyebrow">A friendly, hands-on learning path</p>
+      <h1 id="page-title">Python, one step at a time.</h1>
+      <p class="intro">Short lessons, simple explanations, and a place to try code. Start with the basics, make mistakes safely, and learn what to do next.</p>
+      <a class="course-card" href="basic-python/index.html">
+        <span class="number" aria-hidden="true">01</span>
+        <span>
+          <h2>Basic Python</h2>
+          <p>Syntax, variables, decisions, loops, lists, common mistakes, and a live code runner.</p>
+        </span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </section>
+  </main>
+</body>
+</html>
