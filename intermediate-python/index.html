@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fb">
+  <title>Intermediate Python — Python, one step at a time</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html"><span class="brand-mark">Py</span> Python, one step at a time</a>
+    <a class="back-link" href="../index.html">All lessons <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">Folder 02 · Intermediate</p>
+        <h1 id="page-title">Build on what you know<span class="period">.</span></h1>
+        <p class="hero-description">Put Python fundamentals to work with functions, comprehensions, dictionaries, sorting, and debugging. Edit each example and run it to learn from the result.</p>
+        <a class="button button-primary" href="#challenges">Start the challenges <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <span class="float-chip chip-one">lambda</span>
+        <span class="float-chip chip-two">{ "key": value }</span>
+        <div class="python-tile">Py</div>
+        <span class="spark">✦</span>
+      </div>
+    </section>
+
+    <nav class="lesson-nav" aria-label="On this page">
+      <a href="#challenges">Challenges</a>
+      <a href="#debugging">How feedback works</a>
+    </nav>
+
+    <section class="section" id="challenges">
+      <div class="section-heading">
+        <p class="eyebrow">Ten hands-on questions</p>
+        <h2>Make the code work.</h2>
+        <p>Start with a blank editor and write your own code. Check your answer to see whether it works. If Python finds an error, feedback explains the cause, points to the line, and suggests what to change.</p>
+      </div>
+      <p class="runtime-status" id="runtime-status" role="status" aria-live="polite">Python loads in your browser when you check your first answer.</p>
+      <div class="progress-track" role="progressbar" aria-label="Challenges completed" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0">
+        <span class="progress-fill"></span>
+      </div>
+      <p class="progress-label" aria-live="polite">0 of 10 challenges complete — every little step counts! 🌱</p>
+
+      <div class="challenge-grid">
+        <article class="challenge-card" data-expected="22.0" data-answer-line="1" data-hint="Pass a tax rate as the second argument, for example total_price(20, 0.1)." data-logic-cause="The function call needs both a price and a tax rate." data-logic-fix="Write print(total_price(20, 0.1)) to pass both values.">
+          <div class="challenge-heading"><span class="challenge-number">01</span><span class="level">Functions</span></div>
+          <h3>Pass the missing argument</h3>
+          <p>Define <code>total_price(price, tax_rate)</code> to apply tax, then call it with <code>20</code> and <code>0.1</code>. Print <code>22.0</code>.</p>
+          <label class="editor-label" for="challenge-1">Your Python code</label>
+          <textarea id="challenge-1" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-1"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div>
+          <div class="feedback" id="feedback-1" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+
+        <article class="challenge-card" data-expected="[2, 4, 6]" data-answer-line="1" data-hint="Keep numbers divisible by 2: use number % 2 == 0." data-logic-cause="The condition selected odd numbers, not even numbers." data-logic-fix="Use if number % 2 == 0 in your list comprehension.">
+          <div class="challenge-heading"><span class="challenge-number">02</span><span class="level">Comprehensions</span></div>
+          <h3>Select the even numbers</h3>
+          <p>From <code>[1, 2, 3, 4, 5, 6]</code>, build and print a new list containing only the even numbers: <code>[2, 4, 6]</code>.</p>
+          <label class="editor-label" for="challenge-2">Your Python code</label>
+          <textarea id="challenge-2" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-2"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div>
+          <div class="feedback" id="feedback-2" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+
+        <article class="challenge-card" data-expected="{'tea': 2, 'coffee': 1}" data-answer-line="1" data-hint="Start a new word at zero before adding one, for example counts[word] = counts.get(word, 0) + 1." data-logic-cause="A dictionary count must start at zero for a word that has not been seen yet." data-logic-fix="Use counts[word] = counts.get(word, 0) + 1 inside the loop.">
+          <div class="challenge-heading"><span class="challenge-number">03</span><span class="level">Dictionaries</span></div>
+          <h3>Count each word</h3>
+          <p>Count the words in <code>["tea", "coffee", "tea"]</code>. Print <code>{'tea': 2, 'coffee': 1}</code>.</p>
+          <label class="editor-label" for="challenge-3">Your Python code</label>
+          <textarea id="challenge-3" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-3"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div>
+          <div class="feedback" id="feedback-3" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+
+        <article class="challenge-card" data-expected="Bo" data-answer-line="1" data-hint="Sort by the score in descending order by adding reverse=True to sorted(...)." data-logic-cause="The scores were sorted from lowest to highest, so the first student did not have the top score." data-logic-fix="Add reverse=True to sorted(...), or select the last item in the ascending list.">
+          <div class="challenge-heading"><span class="challenge-number">04</span><span class="level">Sorting</span></div>
+          <h3>Find the top score</h3>
+          <p>From <code>[("Ari", 82), ("Bo", 95), ("Cy", 88)]</code>, print the name with the highest score: <code>Bo</code>.</p>
+          <label class="editor-label" for="challenge-4">Your Python code</label>
+          <textarea id="challenge-4" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-4"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div>
+          <div class="feedback" id="feedback-4" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+
+        <article class="challenge-card" data-expected="0" data-answer-line="1" data-hint="Put the division in a try block and return 0 from an except ZeroDivisionError block.">
+          <div class="challenge-heading"><span class="challenge-number">05</span><span class="level">Error handling</span></div>
+          <h3>Handle division by zero</h3>
+          <p>Define <code>safe_divide(a, b)</code> so <code>safe_divide(8, 0)</code> returns <code>0</code> instead of crashing.</p>
+          <label class="editor-label" for="challenge-5">Your Python code</label>
+          <textarea id="challenge-5" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-5"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div>
+          <div class="feedback" id="feedback-5" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+
+        <article class="challenge-card" data-expected="10" data-answer-line="1" data-hint="Use a nested comprehension: [value for row in matrix for value in row]." data-logic-cause="sum() cannot add a list of rows; it needs a flat list of numbers." data-logic-fix="Flatten the rows first: [value for row in matrix for value in row].">
+          <div class="challenge-heading"><span class="challenge-number">06</span><span class="level">Nested data</span></div>
+          <h3>Flatten the matrix</h3>
+          <p>Flatten <code>[[1, 2], [3, 4]]</code> into one list, then print its sum: <code>10</code>.</p>
+          <label class="editor-label" for="challenge-6">Your Python code</label>
+          <textarea id="challenge-6" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-6"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div>
+          <div class="feedback" id="feedback-6" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+
+        <article class="challenge-card" data-expected="100.0" data-answer-line="1" data-hint="Simple interest is principal * rate * time. Use 0.05 for 5%." data-logic-cause="The result should be interest earned, not the original amount or the total after interest." data-logic-fix="Calculate principal * (rate / 100) * years, or use a decimal rate: principal * 0.05 * years.">
+          <div class="challenge-heading"><span class="challenge-number">07</span><span class="level">Money math</span></div>
+          <h3>Grow a tiny savings pot</h3>
+          <p>Calculate simple interest for $1,000 at 5% for 2 years. Print the interest earned: <code>100.0</code>. (Use <code>1000 * 0.05 * 2</code>.)</p>
+          <label class="editor-label" for="challenge-7">Your Python code</label>
+          <textarea id="challenge-7" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-7"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div>
+          <div class="feedback" id="feedback-7" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+
+        <article class="challenge-card" data-expected="Leap year" data-answer-line="1" data-hint="A year is leap when divisible by 400, or divisible by 4 but not by 100. Use year % 4 == 0 to check divisibility by 4." data-logic-cause="The leap-year rule has an exception: years divisible by 100 are not leap years unless also divisible by 400." data-logic-fix="Use: year % 400 == 0 or (year % 4 == 0 and year % 100 != 0).">
+          <div class="challenge-heading"><span class="challenge-number">08</span><span class="level">Calendar logic</span></div>
+          <h3>Is it a leap year?</h3>
+          <p>Check whether <code>year = 2024</code> is a leap year. Print <code>Leap year</code> or <code>Not a leap year</code>.</p>
+          <label class="editor-label" for="challenge-8">Your Python code</label>
+          <textarea id="challenge-8" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-8"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div>
+          <div class="feedback" id="feedback-8" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+
+        <article class="challenge-card" data-expected="45" data-answer-line="1" data-hint="Use max(numbers) to find and print the largest number." data-logic-cause="The printed value is not the largest item in the given list." data-logic-fix="Use max(numbers) or compare the values and keep the greatest one.">
+          <div class="challenge-heading"><span class="challenge-number">09</span><span class="level">Number detective</span></div>
+          <h3>Find the biggest number</h3>
+          <p>Find the winner in <code>[12, 45, 7, 30]</code>. Print the largest number: <code>45</code>.</p>
+          <label class="editor-label" for="challenge-9">Your Python code</label>
+          <textarea id="challenge-9" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-9"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div>
+          <div class="feedback" id="feedback-9" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+
+        <article class="challenge-card" data-expected="8" data-answer-line="1" data-hint="Remove duplicates with set(), sort largest-first with reverse=True, then choose index 1." data-logic-cause="The second-largest distinct number is below the maximum; duplicate maximum values should only count once." data-logic-fix="Try sorted(set(numbers), reverse=True)[1] to get the second-largest distinct value.">
+          <div class="challenge-heading"><span class="challenge-number">10</span><span class="level">Bonus round</span></div>
+          <h3>Unlock the second place</h3>
+          <p>Find the second-largest <strong>distinct</strong> number in <code>[10, 4, 8, 10, 7]</code>. Print <code>8</code>—the repeated 10 only counts once.</p>
+          <label class="editor-label" for="challenge-10">Your Python code</label>
+          <textarea id="challenge-10" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-10"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div>
+          <div class="feedback" id="feedback-10" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+      </div>
+      <section class="completion-banner" id="completion-banner" aria-live="polite" hidden>
+        <span class="celebration-emoji" aria-hidden="true">🎉 👏 🥳</span>
+        <h2>You did it! All ten challenges solved!</h2>
+        <p>You kept going, learned from the tricky bits, and built some great Python logic. Give yourself a round of applause! 🌟</p>
+        <button class="button" id="celebrate-again" type="button">Celebrate again 🎊</button>
+        <div class="confetti" aria-hidden="true"><i>🎉</i><i>✨</i><i>🎊</i><i>⭐</i><i>👏</i><i>🌟</i><i>🎈</i><i>✨</i></div>
+      </section>
+    </section>
+
+    <section class="section help-section" id="debugging">
+      <div class="section-heading">
+        <p class="eyebrow">Common beginner errors</p>
+        <h2>Understand the cause. Find a fix.</h2>
+        <p>Python explains what failed, why it happened, and the line to check. Wrong answers can also be logic errors: the code runs, but the result is not what you intended.</p>
+      </div>
+      <div class="error-grid">
+        <article class="error-card"><h3>SyntaxError · punctuation</h3><p><strong>Cause:</strong> Python can't parse the line, often because a quote or colon is missing.</p><p><strong>Try:</strong> <code>if score &gt; 5:</code> needs a colon; <code>print("Hi")</code> needs matching quotes.</p></article>
+        <article class="error-card"><h3>IndentationError · spaces</h3><p><strong>Cause:</strong> Lines inside a function, loop, or condition aren't indented consistently.</p><p><strong>Try:</strong> indent the body by four spaces, for example <code>    print("Hello")</code>.</p></article>
+        <article class="error-card"><h3>NameError · spelling</h3><p><strong>Cause:</strong> A variable name is misspelled or has not been created yet.</p><p><strong>Try:</strong> define it first, such as <code>score = 10</code>, and use the exact same spelling.</p></article>
+        <article class="error-card"><h3>TypeError · value types</h3><p><strong>Cause:</strong> An operation received the wrong kind of value, such as adding text and a number.</p><p><strong>Try:</strong> convert the number with <code>str(age)</code>, or check that a list contains numbers before calling <code>sum()</code>.</p></article>
+        <article class="error-card"><h3>Logic error · wrong result</h3><p><strong>Cause:</strong> The code runs, but a condition or calculation does something different than intended.</p><p><strong>Try:</strong> check operators: even numbers use <code>% 2 == 0</code>; highest-first sorting uses <code>reverse=True</code>.</p></article>
+      </div>
+      <div class="tip-banner"><span class="tip-icon" aria-hidden="true">i</span><p>Your code runs in your browser with Python. The first run downloads the Python runtime, so an internet connection is needed.</p></div>
+    </section>
+
+    <footer class="footer">
+      <a href="../basic-python/index.html">← Review Basic Python</a>
+      <a href="../index.html">Back to learning path ↑</a>
+    </footer>
+  </main>
+</body>
+</html>

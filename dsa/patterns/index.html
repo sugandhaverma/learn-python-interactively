@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fb">
+  <title>Pattern Problems — DSA, Python one step at a time</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/app.js" defer></script>
+</head>
+<body class="topic-page" data-topic="patterns">
+  <header class="topbar"><a class="brand" href="../../index.html"><span class="brand-mark">Py</span> Python, one step at a time</a><a class="back-link" href="../index.html">All DSA topics ↗</a></header>
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">DSA topic 05 · Pattern problems</p>
+        <h1>Turn loops into little works of art<span class="period">.</span></h1>
+        <p class="hero-description">Patterns are loop puzzles in disguise. Decide what each row needs, then print it one line at a time. Your editor is blank—bring your imagination!</p>
+        <a class="button button-primary" href="#challenges">Start drawing <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true"><span>✨</span><i>* → ** → ***</i></div>
+    </section>
+
+    <nav class="lesson-nav" aria-label="On this page"><a href="#challenges">Challenges</a><a href="#debugging">Pattern hints</a></nav>
+
+    <section class="section" id="challenges">
+      <div class="section-heading">
+        <p class="eyebrow">Three loop-art quests</p>
+        <h2>Ready to make some shapes?</h2>
+        <p>Write Python that prints the exact pattern shown. Use loops rather than typing every row by hand. Wrong output is a logic puzzle; errors come with a line to inspect and a helpful suggestion.</p>
+      </div>
+      <p class="runtime-status" id="runtime-status" role="status" aria-live="polite">Python loads in your browser when you check your first answer.</p>
+      <div class="progress-track" role="progressbar" aria-label="Challenges completed" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0"><span class="progress-fill"></span></div>
+      <p class="progress-label" aria-live="polite">0 of 3 challenges complete — one clever step at a time! 🌱</p>
+
+      <div class="challenge-grid">
+        <article class="challenge-card" data-expected="*|**|***|****" data-answer-line="1" data-logic-line="2" data-hint="For row in range(1, 5), print '*' repeated row times: print('*' * row)." data-logic-cause="Each new row should contain one more star than the previous row." data-logic-fix="Inside the loop, print '*' * row. Start the loop at 1 and stop before 5.">
+          <div class="challenge-heading"><span class="challenge-number">01</span><span class="level">Star triangle</span></div>
+          <h3>Build a tiny star tower</h3>
+          <p>Print four rows. Row 1 has one star, row 2 has two, and so on:<br><code>*<br>**<br>***<br>****</code></p>
+          <label class="editor-label" for="challenge-1">Your Python code</label>
+          <textarea id="challenge-1" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-1"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div>
+          <div class="feedback" id="feedback-1" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+
+        <article class="challenge-card" data-expected="1|12|123|1234" data-answer-line="1" data-logic-line="2" data-hint="For each row from 1 to 4, print the numbers from 1 through that row. One way is to build a string in an inner loop." data-logic-cause="Each row starts at 1 and grows by one number; the row number tells you where to stop." data-logic-fix="Use an outer loop for rows 1–4 and an inner loop from 1 through row, adding each number to a row string.">
+          <div class="challenge-heading"><span class="challenge-number">02</span><span class="level">Number ladder</span></div>
+          <h3>Climb the number steps</h3>
+          <p>Print a number ladder where each row counts from 1 up to its row number:<br><code>1<br>12<br>123<br>1234</code></p>
+          <label class="editor-label" for="challenge-2">Your Python code</label>
+          <textarea id="challenge-2" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-2"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div>
+          <div class="feedback" id="feedback-2" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+
+        <article class="challenge-card" data-expected="   *|  ***| *****|*******" data-answer-line="1" data-logic-line="2" data-hint="For row 0 through 3, print 3-row spaces followed by 2*row+1 stars." data-logic-cause="A centered pyramid needs fewer leading spaces and two more stars on each next row." data-logic-fix="For row in range(4), print ' ' * (3 - row) followed by '*' * (2 * row + 1).">
+          <div class="challenge-heading"><span class="challenge-number">03</span><span class="level">Pyramid power</span></div>
+          <h3>Light up the night sky</h3>
+          <p>Print a centered pyramid with four rows. Each row has fewer spaces and two more stars:<br><code>   *<br>  ***<br> *****<br>*******</code></p>
+          <label class="editor-label" for="challenge-3">Your Python code</label>
+          <textarea id="challenge-3" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-3"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div>
+          <div class="feedback" id="feedback-3" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+      </div>
+
+      <section class="completion-banner" id="completion-banner" aria-live="polite" hidden>
+        <span class="celebration-emoji" aria-hidden="true">🎉 👏 🥳</span>
+        <h2>Pattern artist unlocked!</h2>
+        <p>You turned loops into stars and ladders. Keep creating—your logic is shining bright! 🌟</p>
+        <button class="button" id="celebrate-again" type="button">Celebrate again 🎊</button>
+        <div class="confetti" aria-hidden="true"><i>🎉</i><i>✨</i><i>🎊</i><i>⭐</i><i>👏</i><i>🌟</i><i>🎈</i><i>✨</i></div>
+      </section>
+    </section>
+
+    <section class="section help-section" id="debugging">
+      <div class="section-heading">
+        <p class="eyebrow">Pattern hints</p>
+        <h2>One row at a time.</h2>
+        <p>Use an outer loop to choose the row. Use the row number to decide how many spaces, stars, or digits to make. Check the named line when the shape looks different.</p>
+      </div>
+      <div class="error-grid">
+        <article class="error-card"><h3>SyntaxError · missing colon</h3><p>Loop headers need a colon: <code>for row in range(4):</code>. Indent the line that prints each row.</p></article>
+        <article class="error-card"><h3>IndentationError · row not inside loop</h3><p>The row-building and printing lines need four spaces inside the outer loop. Press Tab in the editor to add them.</p></article>
+        <article class="error-card"><h3>Logic error · wrong shape</h3><p>If rows are too short or repeat, check how the row number controls the output. A centered pyramid needs <code>2 * row + 1</code> stars.</p></article>
+      </div>
+      <div class="tip-banner"><span class="tip-icon" aria-hidden="true">i</span><p>Try tracing a tiny version on paper: what should row 1 print, then row 2? Tiny steps make big patterns easy! 🌱</p></div>
+    </section>
+    <footer class="footer"><a href="../index.html">← All DSA topics</a><a href="../../index.html">Back to learning path ↑</a></footer>
+  </main>
+</body>
+</html>

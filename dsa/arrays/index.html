@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fb">
+  <title>Arrays &amp; Lists — DSA, Python one step at a time</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/app.js" defer></script>
+</head>
+<body class="topic-page" data-topic="arrays">
+  <header class="topbar"><a class="brand" href="../../index.html"><span class="brand-mark">Py</span> Python, one step at a time</a><a class="back-link" href="../index.html">All DSA topics ↗</a></header>
+  <main>
+    <section class="hero">
+      <div><p class="eyebrow">DSA topic 01 · Arrays &amp; lists</p><h1>One list, many possibilities<span class="period">.</span></h1><p class="hero-description">Scan, compare, and rearrange list items. Start with a blank editor—every bug is just a clue in disguise.</p><a class="button button-primary" href="#challenges">Let's play <span aria-hidden="true">↓</span></a></div>
+      <div class="hero-art" aria-hidden="true"><span>📦</span><i>[ item, item, item ]</i></div>
+    </section>
+    <nav class="lesson-nav" aria-label="On this page"><a href="#challenges">Challenges</a><a href="#debugging">Debugging tips</a></nav>
+    <section class="section" id="challenges">
+      <div class="section-heading"><p class="eyebrow">Three list quests</p><h2>Ready, set, iterate!</h2><p>Write Python that prints the requested result. If your code errors or the answer is different, you’ll get the cause, a line to inspect, and a useful next step.</p></div>
+      <p class="runtime-status" id="runtime-status" role="status" aria-live="polite">Python loads in your browser when you check your first answer.</p>
+      <div class="progress-track" role="progressbar" aria-label="Challenges completed" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0"><span class="progress-fill"></span></div>
+      <p class="progress-label" aria-live="polite">0 of 3 challenges complete — one clever step at a time! 🌱</p>
+      <div class="challenge-grid">
+        <article class="challenge-card" data-expected="18" data-answer-line="1" data-hint="Start total at 0, add every number in a for loop, then print total." data-logic-cause="A list total needs to include each number once." data-logic-fix="Loop over numbers and add each value to a running total.">
+          <div class="challenge-heading"><span class="challenge-number">01</span><span class="level">Add them up</span></div><h3>The treasure tally</h3><p>Your treasure values are <code>[3, 5, 2, 8]</code>. Add them with a loop and print <code>18</code>.</p>
+          <label class="editor-label" for="challenge-1">Your Python code</label><textarea id="challenge-1" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-1"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div><div class="feedback" id="feedback-1" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+        <article class="challenge-card" data-expected="9" data-answer-line="1" data-hint="Set largest to the first number, then update it whenever you find a bigger value." data-logic-cause="The result should be the greatest item, not just the first or last item." data-logic-fix="Compare each number with largest and update largest when number > largest.">
+          <div class="challenge-heading"><span class="challenge-number">02</span><span class="level">Compare</span></div><h3>Find the tallest tower</h3><p>Find the biggest number in <code>[4, 9, 1, 7]</code> by scanning the list. Print <code>9</code>.</p>
+          <label class="editor-label" for="challenge-2">Your Python code</label><textarea id="challenge-2" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-2"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div><div class="feedback" id="feedback-2" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+        <article class="challenge-card" data-expected="[4, 3, 2, 1]" data-answer-line="1" data-hint="Loop over the valid indexes from len(numbers) - 1 down to 0 and append each item." data-logic-cause="To reverse a list, visit its indexes from the last position down to the first." data-logic-fix="Use range(len(numbers) - 1, -1, -1) and append numbers[index] to a new list.">
+          <div class="challenge-heading"><span class="challenge-number">03</span><span class="level">Reverse</span></div><h3>Walk the list backwards</h3><p>Make a new reversed list from <code>[1, 2, 3, 4]</code> by looping over indexes. Print <code>[4, 3, 2, 1]</code>.</p>
+          <label class="editor-label" for="challenge-3">Your Python code</label><textarea id="challenge-3" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-3"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div><div class="feedback" id="feedback-3" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+      </div>
+      <section class="completion-banner" id="completion-banner" aria-live="polite" hidden><span class="celebration-emoji" aria-hidden="true">🎉 👏 🥳</span><h2>List legend unlocked!</h2><p>You turned a list into a playground for your ideas. Three cheers for your persistence! 🌟</p><button class="button" id="celebrate-again" type="button">Celebrate again 🎊</button><div class="confetti" aria-hidden="true"><i>🎉</i><i>✨</i><i>🎊</i><i>⭐</i><i>👏</i><i>🌟</i><i>🎈</i><i>✨</i></div></section>
+    </section>
+    <section class="section help-section" id="debugging"><div class="section-heading"><p class="eyebrow">When code trips</p><h2>Errors are clues, not grades.</h2><p>A syntax or indentation error stops Python and points to a line. A logic error means the code ran but the answer was unexpected. Check your loop bounds, starting values, and comparisons—then try again.</p></div><div class="error-grid"><article class="error-card"><h3>IndexError · wrong position</h3><p>List indexes start at <code>0</code> and end at <code>len(items) - 1</code>. In a reverse loop, include index 0.</p></article><article class="error-card"><h3>Logic error · missed item</h3><p>Check whether your loop visits every item, and whether your starting value is sensible (like <code>0</code> for a sum).</p></article></div><div class="tip-banner"><span class="tip-icon" aria-hidden="true">i</span><p>Tip: press Tab in the editor to insert four spaces for Python indentation. The first run loads Python in your browser.</p></div></section>
+    <footer class="footer"><a href="../index.html">← All DSA topics</a><a href="../../index.html">Back to learning path ↑</a></footer>
+  </main>
+</body>
+</html>

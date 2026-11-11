@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fb">
+  <title>Searching — DSA, Python one step at a time</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/app.js" defer></script>
+</head>
+<body class="topic-page" data-topic="searching">
+  <header class="topbar"><a class="brand" href="../../index.html"><span class="brand-mark">Py</span> Python, one step at a time</a><a class="back-link" href="../index.html">All DSA topics ↗</a></header>
+  <main>
+    <section class="hero">
+      <div><p class="eyebrow">DSA topic 02 · Searching</p><h1>Become a code detective<span class="period">.</span></h1><p class="hero-description">Look for a value one step at a time, count the clues, then learn how sorted data lets you search faster.</p><a class="button button-primary" href="#challenges">Find the clues <span aria-hidden="true">↓</span></a></div>
+      <div class="hero-art" aria-hidden="true"><span>🔎</span><i>target = ?</i></div>
+    </section>
+    <nav class="lesson-nav" aria-label="On this page"><a href="#challenges">Challenges</a><a href="#debugging">Debugging tips</a></nav>
+    <section class="section" id="challenges">
+      <div class="section-heading"><p class="eyebrow">Three detective missions</p><h2>Can you find the clue?</h2><p>Write code in the blank editor. Feedback celebrates wins and, when something goes wrong, explains the cause and points you to a line to review.</p></div>
+      <p class="runtime-status" id="runtime-status" role="status" aria-live="polite">Python loads in your browser when you check your first answer.</p>
+      <div class="progress-track" role="progressbar" aria-label="Challenges completed" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0"><span class="progress-fill"></span></div>
+      <p class="progress-label" aria-live="polite">0 of 3 challenges complete — one clever step at a time! 🌱</p>
+      <div class="challenge-grid">
+        <article class="challenge-card" data-expected="2" data-answer-line="1" data-hint="Loop through the list with enumerate and print the index when the value equals target." data-logic-cause="Python list indexes start at 0, so the third item has index 2." data-logic-fix="Use enumerate(numbers) and print(index) when number == target.">
+          <div class="challenge-heading"><span class="challenge-number">01</span><span class="level">Linear search</span></div><h3>Find the hidden star</h3><p>Find <code>7</code> in <code>[2, 4, 7, 9]</code>. Print its index, <code>2</code> (indexes start at zero).</p>
+          <label class="editor-label" for="challenge-1">Your Python code</label><textarea id="challenge-1" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-1"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div><div class="feedback" id="feedback-1" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+        <article class="challenge-card" data-expected="3" data-answer-line="1" data-hint="Start a counter at 0, loop over the numbers, and add 1 whenever number == target." data-logic-cause="Count every matching value, not just the first one." data-logic-fix="Do not stop after the first match; increase count for each matching item.">
+          <div class="challenge-heading"><span class="challenge-number">02</span><span class="level">Count matches</span></div><h3>How many echoes?</h3><p>Count how many times <code>3</code> appears in <code>[1, 3, 3, 5, 3]</code>. Print <code>3</code>.</p>
+          <label class="editor-label" for="challenge-2">Your Python code</label><textarea id="challenge-2" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-2"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div><div class="feedback" id="feedback-2" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+        <article class="challenge-card" data-expected="5" data-answer-line="1" data-hint="Set low = 0 and high = len(numbers) - 1. Check the middle; move low or high based on its value." data-logic-cause="Binary search must shrink the search range after each middle check and compare the middle value with the target." data-logic-fix="If numbers[mid] is too small, set low = mid + 1; if too large, set high = mid - 1.">
+          <div class="challenge-heading"><span class="challenge-number">03</span><span class="level">Binary search</span></div><h3>Race to the middle</h3><p>Use binary search to find <code>11</code> in <code>[1, 3, 5, 7, 9, 11, 13]</code>. Print its index: <code>5</code>.</p>
+          <label class="editor-label" for="challenge-3">Your Python code</label><textarea id="challenge-3" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-3"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div><div class="feedback" id="feedback-3" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+      </div>
+      <section class="completion-banner" id="completion-banner" aria-live="polite" hidden><span class="celebration-emoji" aria-hidden="true">🎉 👏 🥳</span><h2>Case closed, detective!</h2><p>You followed the clues and found every target. Your search skills are leveling up! 🌟</p><button class="button" id="celebrate-again" type="button">Celebrate again 🎊</button><div class="confetti" aria-hidden="true"><i>🎉</i><i>✨</i><i>🎊</i><i>⭐</i><i>👏</i><i>🌟</i><i>🎈</i><i>✨</i></div></section>
+    </section>
+    <section class="section help-section" id="debugging"><div class="section-heading"><p class="eyebrow">When code trips</p><h2>Errors are clues, not grades.</h2><p>A syntax or indentation error stops Python and points to a line. A logic error means the code ran but found the wrong index or count. Check index boundaries and update the search range every round.</p></div><div class="error-grid"><article class="error-card"><h3>IndexError · off-by-one</h3><p>The first list index is <code>0</code>. The last valid index is <code>len(items) - 1</code>, not <code>len(items)</code>.</p></article><article class="error-card"><h3>Logic error · search stuck</h3><p>Binary search must change <code>low</code> or <code>high</code> each time. Otherwise the loop may never reach the answer.</p></article></div><div class="tip-banner"><span class="tip-icon" aria-hidden="true">i</span><p>Binary search works on sorted lists. The first run loads Python in your browser.</p></div></section>
+    <footer class="footer"><a href="../index.html">← All DSA topics</a><a href="../../index.html">Back to learning path ↑</a></footer>
+  </main>
+</body>
+</html>

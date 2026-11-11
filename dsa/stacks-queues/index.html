@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fb">
+  <title>Stacks &amp; Queues — DSA, Python one step at a time</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/app.js" defer></script>
+</head>
+<body class="topic-page" data-topic="stacks and queues">
+  <header class="topbar"><a class="brand" href="../../index.html"><span class="brand-mark">Py</span> Python, one step at a time</a><a class="back-link" href="../index.html">All DSA topics ↗</a></header>
+  <main>
+    <section class="hero">
+      <div><p class="eyebrow">DSA topic 04 · Stacks &amp; queues</p><h1>Who goes in—and who comes out?<span class="period">.</span></h1><p class="hero-description">A stack is like a pile of books; a queue is like a line for your favorite ride. Explore how the order changes the answer.</p><a class="button button-primary" href="#challenges">Join the line <span aria-hidden="true">↓</span></a></div>
+      <div class="hero-art" aria-hidden="true"><span>📚</span><i>push · pop · enqueue · dequeue</i></div>
+    </section>
+    <nav class="lesson-nav" aria-label="On this page"><a href="#challenges">Challenges</a><a href="#debugging">Debugging tips</a></nav>
+    <section class="section" id="challenges">
+      <div class="section-heading"><p class="eyebrow">Three structure quests</p><h2>Pick a rule. Play it out.</h2><p>Start from a blank editor, model each structure with a Python list, and print the requested result. The feedback helps you spot both errors and mixed-up rules.</p></div>
+      <p class="runtime-status" id="runtime-status" role="status" aria-live="polite">Python loads in your browser when you check your first answer.</p>
+      <div class="progress-track" role="progressbar" aria-label="Challenges completed" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0"><span class="progress-fill"></span></div>
+      <p class="progress-label" aria-live="polite">0 of 3 challenges complete — one clever step at a time! 🌱</p>
+      <div class="challenge-grid">
+        <article class="challenge-card" data-expected="[10, 20]" data-answer-line="1" data-hint="Append 10, append 20, append 30, then pop once. Print the remaining stack." data-logic-cause="A stack is last-in, first-out, so pop removes the most recently added item." data-logic-fix="Use stack.append(value) to push and stack.pop() to remove the top item.">
+          <div class="challenge-heading"><span class="challenge-number">01</span><span class="level">Stack · LIFO</span></div><h3>Build a book pile</h3><p>Push <code>10</code>, <code>20</code>, then <code>30</code> onto a stack. Pop once and print the stack: <code>[10, 20]</code>.</p>
+          <label class="editor-label" for="challenge-1">Your Python code</label><textarea id="challenge-1" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-1"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div><div class="feedback" id="feedback-1" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+        <article class="challenge-card" data-expected="Ada" data-answer-line="1" data-hint="A queue serves the first person who joined. Remove and print the item at index 0." data-logic-cause="A queue is first-in, first-out, so Ada is served before Bo and Cy." data-logic-fix="Use queue.pop(0) to remove the person at the front of this list-based queue.">
+          <div class="challenge-heading"><span class="challenge-number">02</span><span class="level">Queue · FIFO</span></div><h3>Serve the first rider</h3><p>The ride queue is <code>["Ada", "Bo", "Cy"]</code>. Let the first rider go and print their name: <code>Ada</code>.</p>
+          <label class="editor-label" for="challenge-2">Your Python code</label><textarea id="challenge-2" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-2"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div><div class="feedback" id="feedback-2" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+        <article class="challenge-card" data-expected="True" data-answer-line="1" data-hint="Push opening brackets onto a stack. For each closing bracket, check and remove the matching opener." data-logic-cause="A closing bracket must match the most recently opened bracket; leftover open brackets make the string unbalanced." data-logic-fix="Use a stack: append opening brackets, pop and compare for closing brackets, then check the stack is empty.">
+          <div class="challenge-heading"><span class="challenge-number">03</span><span class="level">Stack · bracket match</span></div><h3>Are the brackets balanced?</h3><p>Use a stack to check <code>"([])"</code>. Print <code>True</code> when all brackets match in the right order.</p>
+          <label class="editor-label" for="challenge-3">Your Python code</label><textarea id="challenge-3" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-3"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div><div class="feedback" id="feedback-3" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+      </div>
+      <section class="completion-banner" id="completion-banner" aria-live="polite" hidden><span class="celebration-emoji" aria-hidden="true">🎉 👏 🥳</span><h2>Structure master!</h2><p>You know when to stack it and when to wait your turn. What a brilliant finish! 🌟</p><button class="button" id="celebrate-again" type="button">Celebrate again 🎊</button><div class="confetti" aria-hidden="true"><i>🎉</i><i>✨</i><i>🎊</i><i>⭐</i><i>👏</i><i>🌟</i><i>🎈</i><i>✨</i></div></section>
+    </section>
+    <section class="section help-section" id="debugging"><div class="section-heading"><p class="eyebrow">When code trips</p><h2>Errors are clues, not grades.</h2><p>A syntax or indentation error points to code Python cannot run. A logic error means the code ran but used the wrong order. Ask: does the newest item leave first, or the oldest?</p></div><div class="error-grid"><article class="error-card"><h3>IndexError · empty stack</h3><p>Calling <code>pop()</code> on an empty list has no item to remove. Check the stack before popping.</p></article><article class="error-card"><h3>Logic error · mixed-up order</h3><p>Stacks use <code>append()</code> and <code>pop()</code>. A list-based queue removes the first item with <code>pop(0)</code>.</p></article></div><div class="tip-banner"><span class="tip-icon" aria-hidden="true">i</span><p>Say the rule out loud as you trace each step: last in, first out—or first in, first out?</p></div></section>
+    <footer class="footer"><a href="../index.html">← All DSA topics</a><a href="../../index.html">Back to learning path ↑</a></footer>
+  </main>
+</body>
+</html>

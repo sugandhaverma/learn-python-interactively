@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fb">
+  <title>Sorting — DSA, Python one step at a time</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/app.js" defer></script>
+</head>
+<body class="topic-page" data-topic="sorting">
+  <header class="topbar"><a class="brand" href="../../index.html"><span class="brand-mark">Py</span> Python, one step at a time</a><a class="back-link" href="../index.html">All DSA topics ↗</a></header>
+  <main>
+    <section class="hero">
+      <div><p class="eyebrow">DSA topic 03 · Sorting</p><h1>Put the pieces in order<span class="period">.</span></h1><p class="hero-description">Compare neighbors, find the next smallest, and slide values into place. Sorting is a puzzle you can solve one swap at a time.</p><a class="button button-primary" href="#challenges">Shuffle in <span aria-hidden="true">↓</span></a></div>
+      <div class="hero-art" aria-hidden="true"><span>🃏</span><i>swap → compare → repeat</i></div>
+    </section>
+    <nav class="lesson-nav" aria-label="On this page"><a href="#challenges">Challenges</a><a href="#debugging">Debugging tips</a></nav>
+    <section class="section" id="challenges">
+      <div class="section-heading"><p class="eyebrow">Three sorting showdowns</p><h2>Can you line them up?</h2><p>Write each algorithm yourself in the blank editor. Your code should print the exact sorted list shown in the challenge.</p></div>
+      <p class="runtime-status" id="runtime-status" role="status" aria-live="polite">Python loads in your browser when you check your first answer.</p>
+      <div class="progress-track" role="progressbar" aria-label="Challenges completed" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0"><span class="progress-fill"></span></div>
+      <p class="progress-label" aria-live="polite">0 of 3 challenges complete — one clever step at a time! 🌱</p>
+      <div class="challenge-grid">
+        <article class="challenge-card" data-expected="[1, 2, 4, 5]" data-answer-line="1" data-hint="Compare neighboring values in nested loops; swap them when the left value is bigger." data-logic-cause="Bubble sort moves larger values right by swapping out-of-order neighbors." data-logic-fix="If numbers[j] > numbers[j + 1], swap those two values. Repeat enough passes.">
+          <div class="challenge-heading"><span class="challenge-number">01</span><span class="level">Bubble sort</span></div><h3>Bubble the biggest to the top</h3><p>Bubble-sort <code>[5, 1, 4, 2]</code> into ascending order. Print <code>[1, 2, 4, 5]</code>.</p>
+          <label class="editor-label" for="challenge-1">Your Python code</label><textarea id="challenge-1" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-1"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div><div class="feedback" id="feedback-1" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+        <article class="challenge-card" data-expected="[10, 13, 14, 29, 37]" data-answer-line="1" data-hint="For each position, find the smallest value in the unsorted part and swap it into that position." data-logic-cause="Selection sort should place the smallest remaining value at the next open position." data-logic-fix="Track the index of the smallest value in the remaining list, then swap it with numbers[i].">
+          <div class="challenge-heading"><span class="challenge-number">02</span><span class="level">Selection sort</span></div><h3>Pick the next smallest</h3><p>Selection-sort <code>[29, 10, 14, 37, 13]</code>. Print <code>[10, 13, 14, 29, 37]</code>.</p>
+          <label class="editor-label" for="challenge-2">Your Python code</label><textarea id="challenge-2" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-2"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div><div class="feedback" id="feedback-2" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+        <article class="challenge-card" data-expected="[5, 4, 2, 1]" data-answer-line="1" data-hint="Build a sorted list one number at a time. Shift smaller values right until the current number fits." data-logic-cause="Insertion sort keeps the processed part ordered and inserts each next value into its right place." data-logic-fix="Save the current value, shift larger sorted values right, then place the saved value in the gap.">
+          <div class="challenge-heading"><span class="challenge-number">03</span><span class="level">Insertion sort</span></div><h3>Slide each card into place</h3><p>Use insertion sort to order <code>[4, 2, 5, 1]</code> from largest to smallest. Print <code>[5, 4, 2, 1]</code>.</p>
+          <label class="editor-label" for="challenge-3">Your Python code</label><textarea id="challenge-3" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="feedback-3"></textarea>
+          <div class="challenge-actions"><button class="button check-button" type="button">Check answer</button><button class="reset-button" type="button">Reset</button></div><div class="feedback" id="feedback-3" role="status" aria-live="polite">Write your solution here, then check it.</div>
+        </article>
+      </div>
+      <section class="completion-banner" id="completion-banner" aria-live="polite" hidden><span class="celebration-emoji" aria-hidden="true">🎉 👏 🥳</span><h2>Sorting superstar!</h2><p>You compared, swapped, and stayed patient until everything clicked into place. Fantastic work! 🌟</p><button class="button" id="celebrate-again" type="button">Celebrate again 🎊</button><div class="confetti" aria-hidden="true"><i>🎉</i><i>✨</i><i>🎊</i><i>⭐</i><i>👏</i><i>🌟</i><i>🎈</i><i>✨</i></div></section>
+    </section>
+    <section class="section help-section" id="debugging"><div class="section-heading"><p class="eyebrow">When code trips</p><h2>Errors are clues, not grades.</h2><p>Check loop boundaries and compare the correct pair of values. A logic error means the program ran, but one or more swaps were skipped or happened in the wrong direction.</p></div><div class="error-grid"><article class="error-card"><h3>IndexError · neighbor missing</h3><p>When comparing <code>numbers[i]</code> and <code>numbers[i + 1]</code>, stop before the last index.</p></article><article class="error-card"><h3>Logic error · wrong order</h3><p>For ascending order, swap when left is greater. For descending order, swap when left is smaller.</p></article></div><div class="tip-banner"><span class="tip-icon" aria-hidden="true">i</span><p>Try tracing one pass on paper before coding—it makes each comparison easier to see.</p></div></section>
+    <footer class="footer"><a href="../index.html">← All DSA topics</a><a href="../../index.html">Back to learning path ↑</a></footer>
+  </main>
+</body>
+</html>
